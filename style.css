@@ -1,0 +1,212 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins:wght@200;300;400&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #DFDBE5;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#intro {
+    border-radius: 10px;
+    display: flex;
+    align-items: end;
+    padding: 0 30px;
+    justify-content: space-between;
+    min-width: 400px;
+    min-height: 550px;
+}
+
+#intro .featured-podcast {
+    color: #fff;
+    flex: 1;
+    min-height: 175px;
+    padding-right: 20px;
+}
+
+#intro .featured-podcast .header {
+    border: 1px solid #fff;
+    display: inline-block;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 2px 7px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+#intro .featured-podcast .title {
+    font-size: 2.5rem;
+    line-height: 100%;
+    padding-bottom: 10px;
+}
+
+#intro .featured-podcast .details {
+   letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+#player {
+	min-height: 510px;
+    min-width: 400px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	display: flex;
+	padding: 20px 30px 40px;
+    background-color: #fff;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#player .img-container {
+    padding-bottom: 30px;
+}
+
+#player .img-container img {
+    width: 200px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+
+#player .title {
+    color: #333;
+}
+
+#player .desc {
+    color: #aaa;
+    font-size: 0.8rem;
+    padding-bottom: 10px;
+}
+
+#player .date {
+    font-size: 0.8rem;
+    color: #aaa
+}
+
+#player .progress-container {
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 40px 20px;
+    height: 4px;
+    width: 90%;
+    background-color: #f4f4f4;
+}
+
+#player .progress {
+    position: relative;
+    background: #4d194d;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+#player .duration-wrapper {
+    position: relative;
+    top: -25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#player .duration-wrapper span {
+    color: #aaa;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+#player .player-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+}
+
+#player .player-controls .fas {
+    font-size: 22px;
+}
+
+#player .player-controls .fas:not(.play) {
+    color: #aaa;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#player .player-controls .fas:hover {
+    color: #777;
+    cursor: pointer;
+}
+
+#player .player-controls .play {
+    font-size: 45px;
+    color: #4d194d;
+    transition: all 0.3s;
+}
+
+#player .player-controls .play:hover {
+    color: #800380;
+}
+
+@media screen and (max-width:950px) {
+    #main {
+        flex-direction: column;
+    }
+    
+    #player {
+        width: 100%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+    
+    #intro {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 0;
+        min-height: auto;
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width:496px) {
+    #intro {
+        min-width: auto;
+    }
+    
+    #player {
+        max-width: auto;
+    }
+}
+
+@media screen and (max-width:417px) {
+    #intro {
+        width: 270px;
+    }
+    
+    #intro .featured-podcast .title {
+        font-size: 1.9rem;
+    }
+    
+    #player {
+        padding: 0;
+        min-width: auto
+    }
+}
